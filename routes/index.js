@@ -12,4 +12,12 @@ router.get("/", (req, res) => {
   });
 });
 
+router.get("/secured", (req, res) => {
+  res.render("secured", {
+    title: "Secure page",
+    isAuthenticated: req.oidc.isAuthenticated(),
+    user: req.oidc.user,
+  });
+});
+
 module.exports = router;
