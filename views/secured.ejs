@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= title %></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <%- include('partials/nav') %>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <% if(user) { %>
+    <pre><%= JSON.stringify(user, null, 2) %></pre>
+    <% } %>
+  </body>
+</html>
